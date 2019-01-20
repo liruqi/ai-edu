@@ -153,7 +153,7 @@ def CalculateLoss(dict_Param, X, Y, count):
     p = Y * np.log(A2)
     loss = -np.sum(p) / count
     diff_loss = abs(loss - prev_loss)
-    return loss
+    return loss, diff_loss
 
 def InitialParameters(num_input, num_hidden, num_output, flag):
     if flag == 0:
@@ -199,7 +199,7 @@ Y = ReadLabelFile(train_label_file, num_output)
 
 num_images = X.shape[1]
 num_input = X.shape[0]
-max_iteration = 40
+max_iteration = 1
 
 dict_Param = InitialParameters(num_input, num_hidden, num_output, 2)
 w = dict_Param["W1"]

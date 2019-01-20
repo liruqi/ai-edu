@@ -134,7 +134,7 @@ prev_loss, loss, diff_loss = 0,0,0
 eps=1e-11
 W, B = InitialWeights(num_category, num_features, 'zero')
 eta = 0.1
-max_iteration = 1000
+max_iteration = 100
 
 for iteration in range(max_iteration):
     for i in range(num_samples):
